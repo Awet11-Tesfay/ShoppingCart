@@ -4,6 +4,7 @@ from django.contrib import messages
 from math import ceil
 from django.conf import settings
 import json
+
 # Create your views here.
 def index(request):
     allProds = []
@@ -22,3 +23,6 @@ def index(request):
 
 
     return render(request, "index.html")
+
+
+
