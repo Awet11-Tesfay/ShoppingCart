@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate,login,logout
 
 
 # Create your views here.
@@ -39,3 +39,9 @@ def login(request):
             return redirect('/auth/login')
 
     return render(request, 'login.html')
+
+
+def handlelogout(request):
+    logout(request)
+    messages.info(request,"Logout Success")
+    return redirect('/auth/login')
