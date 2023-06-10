@@ -4,4 +4,5 @@ from ecommerceapp import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('contact', views.contact, name="contact"),
 ]
