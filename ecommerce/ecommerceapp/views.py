@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from ecommerceapp.models import Product
 from django.contrib import messages
 from math import ceil
-from ecommerceapp import keys
 from django.conf import settings
 import json
 # Create your views here.
