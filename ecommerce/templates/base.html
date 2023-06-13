@@ -63,22 +63,21 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="/">Home</a></li>
-            <li><a class="nav-link scrollto" href="/blog">Blog</a></li>
             <li><a class="nav-link scrollto" href="/about">About</a></li>
             <li><a class="nav-link scrollto" href="/checkout">Checkout</a></li>
-            <li><a class="nav-link scrollto" href="/profile">My Profile</a></li>
+            <li><a class="nav-link scrollto" href="/profile">My Profile <i class="fa-regular fa-square-user"></i></a></li>
             <button type="button" class="nav-link scrollto bg-danger p-3 m-2 text-white"
             id="popcart" data-container="body" data-toggle="popover" data-placement="bottom"
-            data-html="true" ><i class="fa-solid fa-cart-shopping"></i>Cart(<span id="cart">0</span>)
+            data-html="true" ><i class="fa-solid fa-cart-shopping"></i> Cart(<span id="cart">0</span>)
             </button>
             
             
             {% if request.user.is_authenticated%}
-            <li class="nav-link scrollto"><a href="/auth/logout/">Logout</a></li>
+            <li class="nav-link scrollto"><a href="/auth/logout/">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
             {% else %}
             <li class="dropdown">
               <a href="#"
-                ><span>SignIn</span> <i class="bi bi-chevron-down"></i
+                ><span>SignIn <i class="fa-solid fa-user"></i></span> <i class="bi bi-chevron-down"></i
               ></a>
 
               <ul>
@@ -93,7 +92,7 @@
            
             <li>
               <a class="nav-link scrollto bg-dark p-3 m-2" href="/contact"
-                >Contact</a
+                ><i class="fa-solid fa-message-middle"></i> Contact</a
               >
             </li>
           </ul>
