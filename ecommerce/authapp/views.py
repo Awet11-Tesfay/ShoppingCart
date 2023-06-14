@@ -10,7 +10,6 @@ from django.utils.encoding import force_bytes,DjangoUnicodeDecodeError, force_st
 
 
 
-
 # Create your views here.
 def signup(request):
     if request.method =="POST":
@@ -29,6 +28,7 @@ def signup(request):
             return redirect('/auth/login')
 
     return render(request,"signup.html")
+
 
 
 def login(request):
