@@ -2,6 +2,8 @@
 
 This is a Django-based eCommerce website project that allows users to browse and purchase products online. It provides features such as user authentication, product catalog, shopping cart functionality, and order management.
 
+![Home page](https://github.com/Awet11-Tesfay/ShoppingCart/assets/78618627/799d9cf8-8e38-40ae-99cf-8453715dc84a)
+
 ## Features
 
 - User Registration and Authentication: Users can sign up, log in, and log out of the website. Authentication is used to protect certain functionalities and ensure secure access.
