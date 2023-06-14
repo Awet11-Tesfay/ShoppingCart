@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from ecommerceapp.models import Product, Contact, Orders
+from ecommerceapp.models import Product, Contact, Orders, OrderUpdate
 from django.contrib import messages
 from math import ceil
 from django.conf import settings
@@ -61,6 +61,27 @@ def checkout(request):
                        address2=address2, city=city, state=state, zip_code=zip_code, phone=phone)
         print(amount)
     return render(request, 'checkout.html')
+
+
+def profile(request):
+    currentuser = request.user.username
+    items = Orders.objects.filter(email=currentuser)
+    rid = ""
+    for i in items:
+        print(i.oid)
+        myid = i.oid
+        rid = myid.replace("ShopyCart", "")
+        print(rid)
+
+    if rid:
+        status = OrderUpdate.objects.filter(order_id=int(rid))
+        for j in status:
+            print(j.update_desc)
+    else:
+        status = None
+
+    context = {"items": items, "status": status}
+    return render(request, "profile.html", context)
 
 
 def about(request):
